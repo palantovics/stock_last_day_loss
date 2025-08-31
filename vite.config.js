@@ -4,10 +4,11 @@ import generouted from '@generouted/react-router/plugin'
 import postcssGlobalData from '@csstools/postcss-global-data'
 import postcssPresetEnv from 'postcss-preset-env'
 import browsers from '@github/browserslist-config'
+import tailwindcss from '@tailwindcss/vite'
 import { globSync } from 'glob'
 
 export default defineConfig({
-    plugins: [react(), generouted()],
+    plugins: [react(), generouted(), tailwindcss()],
     base: '/stock_last_day_loss/', // Add this line - use your repo name
     server: { port: 1234 },
     build: {
