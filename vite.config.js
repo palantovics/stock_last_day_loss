@@ -8,7 +8,12 @@ import { globSync } from 'glob'
 
 export default defineConfig({
     plugins: [react(), generouted()],
+    base: '/stock_last_day_loss/', // Add this line - use your repo name
     server: { port: 1234 },
+    build: {
+        outDir: 'dist', // Ensure output goes to dist/
+        assetsDir: 'assets', // Organize assets in subdirectory
+    },
     css: {
         postcss: {
             plugins: [
